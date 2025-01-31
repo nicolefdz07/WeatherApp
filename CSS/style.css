@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    margin: 0 auto;
+    font-family: 'Poppins', sans-serif;
+    background-color: #062130;
+    /* background-color: #D9DCD6; */
+    backdrop-filter: blur(1000px);
+    box-sizing: border-box;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    
+
+}
+.container  {
+    max-width: 1400px;
+    width: 100%;
+    background-color: #16425b;
+    margin: 0 auto;
+    min-height: 1300px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50px;
+    box-shadow: 5px 5px 50px rgba(0, 0, 0, 0.3);
+}
+/* search bar */
+.search-bar{
+   width: 790px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 50px;
+
+}
+.input {
+    margin-top: 30px;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.5rem;
+    font-family: inherit;
+    outline: none;
+    background-color: #3A7CA5;
+    color: #ffff;
+    height: 50px;
+        
+}
+.input::placeholder{
+    color: #ffff;
+    opacity: 0.6;
+}
+/* current weather */
+.current-weather{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 70%;
+    color: #ffff;
+    line-height: 0.7;
+    margin-right: 20px;
+    gap: 40px;
+
+}
+.current-weather img{
+    width: 300px;
+}
+.current-weather h1{
+    font-size: 3em;
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+.current-weather p{
+    font-size: 1.2rem;
+    opacity: 0.7;
+}
+.current-weather h2{
+    font-size: 5rem;
+    font-weight: 400;
+    margin-top: 90px;
+}
+/* sidebar */
+.week-forecast{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    background-color: #3A7CA5 ;
+    width: 30%;
+    min-height: 700px;
+    padding-top: 20px;
+    right: 0;
+    top: 10%;
+    margin-right: 40px;
+    border-radius: 40px;
+    padding-bottom: 30px;
+    
+}
+
+.week-forecast h3{
+    font-size: 1.8rem;
+    color: #ffff;
+    text-align: center;
+    margin-left: 1.5rem;
+    opacity: 0.8;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+}
+
+.day-forecast{
+    margin-left: 1.5rem;
+    color: #ffff;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    margin-bottom: 90px;
+    justify-content: center;
+    font-size: 1.2rem;
+    border-bottom: 1px solid #ffff;   
+    
+}
+.day-forecast img{
+    width: 50px;
+    
+}
+/* todays forecast */
+.details-container{
+   text-align: center;
+    background-color: #3A7CA5;
+    margin-top: 50px;
+    border-radius: 50px;
+    padding-top: 10px;
+    width: 60%;
+    margin-left: 50px;
+    color: #ffff;
+
+}
+.hour-forecast{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.details-container h3{
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    opacity: 0.8;
+    text-transform: uppercase;
+}
+.today-forecast{
+    display: flex;
+    margin-right: 50px;
+    width: 100%;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: row;
+    gap: 70px;
+    align-items: center;
+    justify-content: space-around;
+    
+
+
+}
+.details-container img{
+    width: 70px;
+}
+
+/* air conditions */
+.air-conditions-container{
+
+    background-color: #3A7CA5;
+    margin-top: 30px;
+    border-radius: 50px;
+    padding-top: 10px;
+    width: 60%;
+    margin-left: 50px;
+    text-align: center;
+    color: #ffff;
+    padding: 20 0px;
+    padding-bottom: 20px;
+    min-height: 390px;
+}
+.air-conditions-container h3{
+    font-size: 1.8rem;
+    opacity: 0.8;
+    text-transform: uppercase;
+}
+
+.air-conditions{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 1.2rem;
+    gap: 50px;
+    margin-top: 80px;
+   
+}
+.air-conditions i {
+    font-size: 1.5rem;
+    color: #ffff;
+    margin-right: 10px;
+}
+
+.air-conditions h3, .air-conditions p{
+    margin: 0;
+    opacity: 1;  
+}
+.air-conditions h3{
+    font-size: 1.8rem;
+    
+}
+.air-conditions-left{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+}
+.air-conditions-right{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+}

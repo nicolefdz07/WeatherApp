@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+    <link rel="stylesheet" href="./CSS/style.css">
+    <title>Climate App</title>
+</head>
+<body>
+    <div class="container">
+
+        <!-- Search -->
+        <div class="search-bar">
+            <input class="input" id="input" type="text" placeholder="Search for a city" value="">
+        </div>
+
+        <!-- current Weather -->
+        <div class="current-weather">
+            <!-- <div class="current-weather-details">
+                <h1>Santo Domingo</h1>
+                <p>Chance of rain: 78%</p>
+                <h2 class="degree">
+                    29°
+                </h2>
+            </div> -->
+            <!-- <img src="./weatherIcons/cloudy.png" alt="cloudy"> -->
+        </div>
+
+        <!-- 5 days forecast -->
+        <div class=" week-forecast">
+            <div class="sidebar">
+                <h3>5 Day Forecast</h3>
+            <div class="day-forecast">
+                <p>Today</p>
+                <img src="./weatherIcons/sun.png" alt="">
+                <p>Cloudy</p>
+                <h2>29°</h2>
+            </div>
+            <div class="day-forecast">
+                <p>Today</p>
+                <img src="./weatherIcons/sun.png" alt="">
+                <p>Cloudy</p>
+                <h2>29°</h2>
+            </div>
+            <div class="day-forecast">
+                <p>Today</p>
+                <img src="./weatherIcons/sun.png" alt="">
+                <p>Cloudy</p>
+                <h2>29°</h2>
+            </div>
+            <div class="day-forecast">
+                <p>Today</p>
+                <img src="./weatherIcons/sun.png" alt="">
+                <p>Cloudy</p>
+                <h2>29°</h2>
+            </div>
+            <div class="day-forecast">
+                <p>Today</p>
+                <img src="./weatherIcons/sun.png" alt="">
+                <p>Cloudy</p>
+                <h2>29°</h2>
+            </div>
+            </div>
+        </div>
+
+        <!-- Hourly forecast -->
+        <div class="details-container">
+            <h3>Today's Forecast</h3>
+            <div class="today-forecast">
+                <div class="hour-forecast">
+                <p>6:00 AM</p>
+                <div class="hour-img">
+                    <img src="./weatherIcons/cloudy.png" alt="">
+                </div>
+                <h2 class="hour-temperature">
+                    27°
+                </h2>
+            </div>
+            <div class="hour-forecast">
+                <p>9:00 AM</p>
+                <div class="hour-img">
+                    <img src="./weatherIcons/cloudy.png" alt="">
+                </div>
+                <h2 class="hour-temperature">
+                    29°
+                </h2>
+            </div>
+            <div class="hour-forecast">
+                <p>12:00 PM</p>
+                <div class="hour-img">
+                    <img src="./weatherIcons/cloudy.png" alt="">
+                </div>
+                <h2 class="hour-temperature">
+                    29°
+                </h2>
+            </div>
+            <div class="hour-forecast">
+                <p>3:00 PM</p>
+                <div class="hour-img">
+                    <img src="./weatherIcons/cloudy.png" alt="">
+                </div>
+                <h2 class="hour-temperature">
+                    27°
+                </h2>
+            </div>
+            <div class="hour-forecast">
+                <p>9:00 AM</p>
+                <div class="hour-img">
+                    <img src="./weatherIcons/cloudy.png" alt="">
+                </div>
+                <h2 class="hour-temperature">
+                    28°
+                </h2>
+            </div>
+            </div>
+        </div>
+
+        <!--  Air conditions -->
+        <div class="air-conditions-container">
+            <h3>Air Conditions</h3>
+            <div class="air-conditions">
+                <div class="air-conditions-left">
+                    <div class="feels-like">
+                        <p>Feels like <i class="fa-solid fa-temperature-quarter"></i></p>
+                        <h3>29°</h3>
+                    </div>
+                    <div class="chance-of-rain">      
+                        <p>Chance of rain <i class="fa-solid fa-droplet"></i></p>
+                        <h3>78%</h3>
+                    </div>
+                </div>
+                <div class="air-conditions-right">
+                    <div class="wind">
+                        <p>Wind <i class="fa-solid fa-wind"></i></p>
+                        <h3>0.2 km/h</h3>
+                    </div>
+                    <div class="uv-index">
+                        <p>UV Index <i class="fa-solid fa-sun"></i></p>
+                        <h3>6</h3>
+                    </div>
+                </div>
+            </div> 
+        </div>
+    </div>
+        
+    </div>
+    <script src="./JS/script.js"></script>
+</body>
+</html>
