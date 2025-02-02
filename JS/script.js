@@ -2,17 +2,8 @@ const API_KEY = '86e6db5407f3601ec5b1981fa202757b';
 const search = document.querySelector('.search-bar')
 const input = document.querySelector('#input')
 
-document.addEventListener('DOMContentLoaded', function () {
-    const input = document.getElementById('input');
-    input.addEventListener('keydown', function (event) {
-      if (event.key === 'Enter') {
-        displayCurrentWeather(event.target.value);
-        displayAirConditions(event.target.value);
-        display5dayForecast(event.target.value);
-        event.target.value = '';
-      }
-    });
-  });
+init();
+
 
 
 async function getLatLon(city){
@@ -31,7 +22,7 @@ async function getCurrentWeather(lat, lon){
     const response = await fetch(API_URL);
     const data = await response.json();
     return data;
-    // console.log(data);
+    
     
 }
 async function displayCurrentWeather(city){
@@ -41,10 +32,7 @@ async function displayCurrentWeather(city){
     const lon_cut = lon.toString().slice(0,4);
     const weather = await getCurrentWeather(lat_cut, lon_cut);
     const kelvin = 273.15;
-    // console.log(weather.weather[0].description);
-    // console.log(name);
-    // console.log(weather.weather[0].main);
-    // console.log(weather.name);
+    
       // Limpia el contenido 
     document.querySelector('.current-weather').innerHTML = '';
 
@@ -107,15 +95,12 @@ async function displayAirConditions(city){
         <div class="air-conditions-right">
                         <div class="wind">
                             <p>Wind <i class="fa-solid fa-wind"></i></p>
-                            <h3>${weather.wind.speed} km/h</h3>
+                            <h3>${weather.wind.speed } m/s</h3>
                         </div>
                     </div>`;
                 document.querySelector('.air-conditions-container').appendChild(div);
-                // console.log(weather);
-                // console.log(weather.wind.speed);
-                // console.log(weather.clouds.all);
-                // console.log(weather.rain["1h"]);
-                //${((weather.clouds.all + weather.rain["1h"]) * 50)}
+               
+                
 }
 
 //async 5day/3 hour forecast
@@ -127,7 +112,7 @@ async function get5dayForecast(lat, lon){
     const data = await response.json();
     return data;
 
-    // console.log(data);
+    
 }
 
 async function display5dayForecast(city){
@@ -142,16 +127,16 @@ async function display5dayForecast(city){
     forecast = list.filter(function(item){
         const hour = item.dt_txt.split(' ')[1];
         return hour === '09:00:00' || hour === '12:00:00' || hour === '18:00:00' || hour === '21:00:00'
-        // return item.dt_txt.includes('12:00:00');
+        
     });
         const days = forecast.filter(function(day){
             const week = day.dt_txt.split(' ')[0];
             return week[0];
         });
-        console.log( days)
+        
         
         const week = days.filter((day) => day.dt_txt.split(' ')[1] === '09:00:00').slice(0, 5);
-        console.log( week);
+        
 
         //limpiar
         const container = document.querySelector('.sidebar');
@@ -193,21 +178,25 @@ async function display5dayForecast(city){
             container.appendChild(div)
             
 
-            console.log(div)
-            console.log(day.dt_txt.split(' ')[0]); 
-            console.log(day.main.temp);
-            console.log(day.weather[0].main);
-
-        })
-    
-        
-        const day = forecast.filter(function(day){
-            const date = day.dt_txt.split(' ')[0];
-            return date[0];
         });
         }
+
+        
     
     
+    function init(){
+        document.addEventListener('DOMContentLoaded', function () {
+            const input = document.getElementById('input');
+            input.addEventListener('keydown', function (event) {
+              if (event.key === 'Enter') {
+                displayCurrentWeather(event.target.value);
+                displayAirConditions(event.target.value);
+                display5dayForecast(event.target.value);
+                event.target.value = '';
+              }
+            });
+          });
+    }
     
 
         function getWeekday(dateString) {
@@ -215,8 +204,6 @@ async function display5dayForecast(city){
             return new Intl.DateTimeFormat('en-US', { weekday: 'long' }).format(date);
         }
         
-        console.log(getWeekday("2025-02-02")); // "Sunday"
+        
 
 
-// displayAirConditions('London');
-// getLatLon('London');
