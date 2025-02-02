@@ -91,6 +91,10 @@ async function displayAirConditions(city){
     const weather = await getCurrentWeather(lat_cut, lon_cut);
     const kelvin = 273.15;
 
+    const container = document.querySelector('.air-conditions-container');
+    while (container.children.length > 1) {
+    container.removeChild(container.lastChild);
+}
     const div = document.createElement('div');
     div.classList.add('air-conditions');
     div.innerHTML = `
@@ -149,11 +153,14 @@ async function display5dayForecast(city){
         const week = days.filter((day) => day.dt_txt.split(' ')[1] === '09:00:00').slice(0, 5);
         console.log( week);
 
+        //limpiar
+        const container = document.querySelector('.sidebar');
+            container.innerHTML = '';
+            
         //include in dom
         const kelvin = 273.15;
-        const sidebar = document.createElement('div')
-        sidebar.classList.add('sidebar');
-        console.log(sidebar)
+        
+        
 
         week.forEach((day)=>{
             const div = document.createElement('div');
@@ -183,8 +190,8 @@ async function display5dayForecast(city){
             temp.textContent = (day.main.temp - kelvin).toFixed(1) + "°C";
             div.appendChild(temp)
 
-            sidebar.appendChild(div)
-            document.querySelector('.week-forecast').appendChild(sidebar)
+            container.appendChild(div)
+            
 
             console.log(div)
             console.log(day.dt_txt.split(' ')[0]); 
@@ -198,14 +205,10 @@ async function display5dayForecast(city){
             const date = day.dt_txt.split(' ')[0];
             return date[0];
         });
-    
-        day.forEach((day, idx) => {
-            // console.log(day.dt_txt);
-        });
-        // console.log(days);
         }
     
-   
+    
+    
 
         function getWeekday(dateString) {
             const date = new Date(dateString);
