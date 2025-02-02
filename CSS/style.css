@@ -60,24 +60,31 @@ body {
     line-height: 0.7;
     margin-right: 20px;
     gap: 40px;
+    transition: 0.3s ease-in;
+    
 
 }
+
 .current-weather img{
     width: 300px;
+    transition: 0.3s ease-in;
 }
 .current-weather h1{
     font-size: 3em;
     font-weight: 400;
     margin-bottom: 5px;
+    transition: 0.3s ease-in;
 }
 .current-weather p{
     font-size: 1.2rem;
     opacity: 0.7;
+    transition: 0.3s ease-in;
 }
 .current-weather h2{
     font-size: 5rem;
     font-weight: 400;
     margin-top: 90px;
+    transition: 0.3s ease-in;
 }
 /* sidebar */
 .week-forecast{
@@ -87,7 +94,7 @@ body {
     align-items: center;
     justify-content: center;
     background-color: #3A7CA5 ;
-    width: 30%;
+    width: 32%;
     min-height: 700px;
     padding-top: 20px;
     right: 0;
@@ -192,7 +199,7 @@ body {
     align-items: center;
     align-items: center;
     justify-content: space-around;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     gap: 50px;
     margin-top: 80px;
    
